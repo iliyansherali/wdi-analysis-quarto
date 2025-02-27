@@ -7,7 +7,8 @@ format:
   pdf: default
 bibliography: references.bib
 execute:
-  echo: false   # Hide code output in final document
+  echo: false
+output-dir: docs 
 ---
 
 
