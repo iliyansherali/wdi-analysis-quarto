@@ -1,0 +1,80 @@
+---
+title: "World Development Indicators Analysis - 2022"
+author: "Iliyan Sherali"
+date: "26 February 2025"
+format:
+  html: default
+  pdf: default
+bibliography: references.bib
+execute:
+  echo: false   # Hide code output in final document
+---
+
+
+This report examines key economic and social indicators from the **World Development Indicators (WDI)** dataset for the year 2022. The analysis focuses on:
+
+- **GDP per Capita**: Measures economic output per person.
+- **Inflation Rate**: Indicates the rate of price increase in an economy.
+- **Life Expectancy**: Represents average years a newborn is expected to live.
+
+## Data Loading
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset
+df = pd.read_csv("data/wdi.csv")
+
+# Select relevant indicators
+df_subset = df[["country", "gdp_per_capita", "inflation_rate", "life_expectancy"]]
+df_subset.dropna(inplace=True)
+
+# Display first few rows
+df_subset.head()
+```
+
+
+Exploratory Data Analysis
+
+GDP per Capita Distribution
+
+```{python}
+
+plt.figure(figsize=(10,5))
+sns.histplot(df_subset["gdp_per_capita"], bins=30, kde=True)
+plt.title("Distribution of GDP per Capita (2022)")
+plt.xlabel("GDP per Capita (USD)")
+plt.ylabel("Frequency")
+plt.show()
+
+```
+
+Figure 1: Histogram of GDP per capita.
+
+
+Inflation Rate vs. GDP per Capita
+```{python}
+
+plt.figure(figsize=(10,6))
+sns.scatterplot(x=df_subset["gdp_per_capita"], y=df_subset["inflation_rate"])
+plt.title("GDP per Capita vs. Inflation Rate")
+plt.xlabel("GDP per Capita (USD)")
+plt.ylabel("Inflation Rate (%)")
+plt.show()
+```
+
+Figure 2: Scatter plot of GDP per capita vs. inflation rate.
+
+```{python}
+df_subset.describe()
+```
+
+Conclusion
+The analysis suggests a diverse economic landscape, where some countries experience high inflation despite low GDP per capita. Further investigation into regional trends could provide deeper insights.
+
+References
+The data used in this report comes from the World Bank's World Development Indicators [@wdi2023]. 
+Prior research suggests that inflation can significantly impact economic growth [@economist2022].
+

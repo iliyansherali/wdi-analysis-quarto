@@ -1,0 +1,56 @@
+---
+title: "WDI 2022: Key Economic and Social Indicators"
+author: "Iliyan Sherali"
+date: "26 February 2025"
+format: revealjs
+execute:
+  echo: false
+theme: simple
+transition: slide
+---
+
+## Introduction
+
+- Analysis of **World Development Indicators (2022)**
+- Focus on **GDP per capita, Inflation Rate, and Life Expectancy**
+- Data sourced from the **World Bank**
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset
+df = pd.read_csv("data/wdi.csv")
+
+# Select relevant indicators
+df_subset = df[["country", "gdp_per_capita", "inflation_rate", "life_expectancy"]]
+df_subset.dropna(inplace=True)
+
+# Display first few rows
+df_subset.head()
+
+```
+
+## GDP per Capita Distribution
+
+```{python}
+plt.figure(figsize=(10,5))
+sns.histplot(df_subset["gdp_per_capita"], bins=30, kde=True)
+plt.title("Distribution of GDP per Capita (2022)")
+plt.xlabel("GDP per Capita (USD)")
+plt.ylabel("Frequency")
+plt.show()
+```
+
+
+## Inflation Rate vs. GDP per Capita
+
+```{python}
+plt.figure(figsize=(10,6))
+sns.scatterplot(x=df_subset["gdp_per_capita"], y=df_subset["inflation_rate"])
+plt.title("GDP per Capita vs. Inflation Rate")
+plt.xlabel("GDP per Capita (USD)")
+plt.ylabel("Inflation Rate (%)")
+plt.show()
+```
