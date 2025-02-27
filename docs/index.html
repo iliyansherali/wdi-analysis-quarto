@@ -24,32 +24,9 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 <!-- htmldependencies:E3FAD763 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" data-relocate-top="true"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -92,206 +69,25 @@ div.csl-indent {
 </header>
 
 
-<p>This report examines key economic and social indicators from the <strong>World Development Indicators (WDI)</strong> dataset for the year 2022. The analysis focuses on:</p>
+<section id="world-development-indicators-analysis---2022" class="level1">
+<h1>World Development Indicators Analysis - 2022</h1>
+<section id="introduction" class="level2">
+<h2>Introduction</h2>
+<p>This project analyzes key economic and social indicators from the <strong>World Development Indicators (WDI)</strong> dataset for the year 2022. The analysis covers:</p>
 <ul>
-<li><strong>GDP per Capita</strong>: Measures economic output per person.</li>
-<li><strong>Inflation Rate</strong>: Indicates the rate of price increase in an economy.</li>
-<li><strong>Life Expectancy</strong>: Represents average years a newborn is expected to live.</li>
+<li><strong>GDP per Capita</strong> – Measures economic output per person.</li>
+<li><strong>Inflation Rate</strong> – Tracks price level changes over time.</li>
+<li><strong>Life Expectancy</strong> – Represents the average lifespan of individuals in a country.</li>
 </ul>
-<section id="data-loading" class="level2">
-<h2>Data Loading</h2>
-<div id="f974288b" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_28554/3383743568.py:10: SettingWithCopyWarning:
-
-
-A value is trying to be set on a copy of a slice from a DataFrame
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">country</th>
-<th data-quarto-table-cell-role="th">gdp_per_capita</th>
-<th data-quarto-table-cell-role="th">inflation_rate</th>
-<th data-quarto-table-cell-role="th">life_expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Albania</td>
-<td>6810.114041</td>
-<td>6.725203</td>
-<td>76.833</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Algeria</td>
-<td>5023.252932</td>
-<td>9.265516</td>
-<td>77.129</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">5</td>
-<td>Angola</td>
-<td>2933.484644</td>
-<td>21.355290</td>
-<td>61.929</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">6</td>
-<td>Antigua and Barbuda</td>
-<td>19919.726687</td>
-<td>7.531078</td>
-<td>79.236</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>Armenia</td>
-<td>7018.051504</td>
-<td>8.640911</td>
-<td>73.372</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Exploratory Data Analysis</p>
-<p>GDP per Capita Distribution</p>
-<div id="91a9cd78" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img src="report_files/figure-html/cell-3-output-1.png" width="808" height="449" /></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Figure 1: Histogram of GDP per capita.</p>
-<p>Inflation Rate vs. GDP per Capita</p>
-<div id="8819a560" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img src="report_files/figure-html/cell-4-output-1.png" width="816" height="523" /></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Figure 2: Scatter plot of GDP per capita vs. inflation rate.</p>
-<div id="351188ee" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display" data-execution_count="4">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">gdp_per_capita</th>
-<th data-quarto-table-cell-role="th">inflation_rate</th>
-<th data-quarto-table-cell-role="th">life_expectancy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">count</td>
-<td>167.000000</td>
-<td>167.000000</td>
-<td>167.000000</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">mean</td>
-<td>17499.667262</td>
-<td>12.609640</td>
-<td>72.477869</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">std</td>
-<td>23672.770627</td>
-<td>19.744256</td>
-<td>7.608886</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">min</td>
-<td>259.025031</td>
-<td>1.045028</td>
-<td>52.997000</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">25%</td>
-<td>2668.564848</td>
-<td>5.550648</td>
-<td>67.436500</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">50%</td>
-<td>6913.050805</td>
-<td>7.967574</td>
-<td>73.514634</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">75%</td>
-<td>21393.929629</td>
-<td>11.654717</td>
-<td>78.237500</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">max</td>
-<td>125006.021815</td>
-<td>171.205491</td>
-<td>85.377000</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<p>Conclusion The analysis suggests a diverse economic landscape, where some countries experience high inflation despite low GDP per capita. Further investigation into regional trends could provide deeper insights.</p>
-<p>References The data used in this report comes from the World Bank’s World Development Indicators <span class="citation" data-cites="wdi2023">(<a href="#ref-wdi2023" role="doc-biblioref">Group 2023</a>)</span>. Prior research suggests that inflation can significantly impact economic growth <span class="citation" data-cites="economist2022">(<a href="#ref-economist2022" role="doc-biblioref">Economist 2022</a>)</span>.</p>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-economist2022" class="csl-entry" role="listitem">
-Economist, The. 2022. <span>“How Inflation Impacts Economic Growth.”</span> <a href="https://www.economist.com/finance-and-economics/2022">https://www.economist.com/finance-and-economics/2022</a>.
-</div>
-<div id="ref-wdi2023" class="csl-entry" role="listitem">
-Group, World Bank. 2023. <span>“World Development Indicators.”</span> <a href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators</a>.
-</div>
-</div>
+<p>The analysis includes <strong>data visualizations, summary statistics, and interpretations</strong> to highlight economic disparities and trends.</p>
+</section>
+<section id="reports-and-presentation" class="level2">
+<h2>Reports and Presentation</h2>
+<ul>
+<li>📄 <strong><a href="docs/report.html">View Full Report</a></strong> (HTML)</li>
+<li>📊 <strong><a href="docs/presentation.html">View Presentation Slides</a></strong> (Reveal.js)</li>
+</ul>
+</section>
 </section>
 
 </main>
