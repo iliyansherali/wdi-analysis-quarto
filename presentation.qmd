@@ -7,6 +7,7 @@ execute:
   echo: false
 theme: simple
 transition: slide
+output-dir: docs 
 ---
 
 ## Introduction
