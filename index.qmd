@@ -1,0 +1,27 @@
+---
+title: "World Development Indicators Analysis - 2022"
+author: "Iliyan Sherali"
+date: "26 February 2025"
+format:
+  html: default
+  pdf: default
+execute:
+  echo: false
+---
+
+# World Development Indicators Analysis - 2022
+
+## Introduction
+
+This project analyzes key economic and social indicators from the **World Development Indicators (WDI)** dataset for the year 2022. The analysis covers:
+
+- **GDP per Capita** – Measures economic output per person.
+- **Inflation Rate** – Tracks price level changes over time.
+- **Life Expectancy** – Represents the average lifespan of individuals in a country.
+
+The analysis includes **data visualizations, summary statistics, and interpretations** to highlight economic disparities and trends.
+
+## Reports and Presentation
+
+- 📄 **[View Full Report](report.html)** (HTML)
+- 📊 **[View Presentation Slides](presentation.html)** (Reveal.js)
