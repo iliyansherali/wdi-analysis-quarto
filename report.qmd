@@ -3,14 +3,13 @@ title: "World Development Indicators Analysis - 2022"
 author: "Iliyan Sherali"
 date: "26 February 2025"
 format:
-  html: default
+  html:
+    self-contained: true  # Embeds CSS, JS, and images into the HTML
   pdf: default
-bibliography: references.bib
 execute:
   echo: false
 output-dir: docs 
 ---
-
 
 This report examines key economic and social indicators from the **World Development Indicators (WDI)** dataset for the year 2022. The analysis focuses on:
 

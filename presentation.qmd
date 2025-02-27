@@ -2,7 +2,10 @@
 title: "WDI 2022: Key Economic and Social Indicators"
 author: "Iliyan Sherali"
 date: "26 February 2025"
-format: revealjs
+format:
+  revealjs:
+    self-contained: true
+    embed-resources: true  # Ensures Reveal.js styles and scripts are included
 execute:
   echo: false
 theme: simple

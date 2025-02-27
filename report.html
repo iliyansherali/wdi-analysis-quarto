@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.6.40" />
 
-<meta name="author" content="Iliyan Sherali">
-<meta name="dcterms.date" content="2025-02-26">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<meta name="author" content="Iliyan Sherali" />
+<meta name="dcterms.date" content="2025-02-26" />
 
 <title>World Development Indicators Analysis - 2022</title>
 <style>
@@ -22,41 +24,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="report_files/libs/clipboard/clipboard.min.js"></script>
-<script src="report_files/libs/quarto-html/quarto.js"></script>
-<script src="report_files/libs/quarto-html/popper.min.js"></script>
-<script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="report_files/libs/quarto-html/anchor.min.js"></script>
-<link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="report_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="report_files/libs/bootstrap/bootstrap-973236bd072d72a04ee9cd82dcc9cb29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<!-- htmldependencies:E3FAD763 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" data-relocate-top="true"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -66,7 +38,7 @@ div.csl-indent {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -107,10 +79,10 @@ div.csl-indent {
 <li><strong>Life Expectancy</strong>: Represents average years a newborn is expected to live.</li>
 </ul>
 <section id="data-loading" class="level2">
-<h2 class="anchored" data-anchor-id="data-loading">Data Loading</h2>
-<div id="8422b26a" class="cell" data-execution_count="1">
+<h2>Data Loading</h2>
+<div id="46322b84" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_30917/3383743568.py:10: SettingWithCopyWarning:
+<pre><code>/var/folders/6l/xfqxt4zj5rvdhhf45x8rl18h0000gn/T/ipykernel_33165/3383743568.py:10: SettingWithCopyWarning:
 
 
 A value is trying to be set on a copy of a slice from a DataFrame
@@ -120,11 +92,23 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
 <thead>
-<tr class="header">
+<tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">country</th>
 <th data-quarto-table-cell-role="th">gdp_per_capita</th>
@@ -176,35 +160,47 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <p>Exploratory Data Analysis</p>
 <p>GDP per Capita Distribution</p>
-<div id="ac2ecbd2" class="cell" data-execution_count="2">
+<div id="9b346956" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
-<figure class="figure">
-<p><img src="report_files/figure-html/cell-3-output-1.png" width="808" height="449" class="figure-img"></p>
+<figure>
+<p><img src="report_files/figure-html/cell-3-output-1.png" width="808" height="449" /></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Figure 1: Histogram of GDP per capita.</p>
-<p>Inflation Rate vs.&nbsp;GDP per Capita</p>
-<div id="a0ef0898" class="cell" data-execution_count="3">
+<p>Inflation Rate vs. GDP per Capita</p>
+<div id="0b36c908" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
-<figure class="figure">
-<p><img src="report_files/figure-html/cell-4-output-1.png" width="816" height="523" class="figure-img"></p>
+<figure>
+<p><img src="report_files/figure-html/cell-4-output-1.png" width="816" height="523" /></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Figure 2: Scatter plot of GDP per capita vs.&nbsp;inflation rate.</p>
-<div id="e9e9088d" class="cell" data-execution_count="4">
+<p>Figure 2: Scatter plot of GDP per capita vs. inflation rate.</p>
+<div id="c030239d" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
 <thead>
-<tr class="header">
+<tr class="header" style="text-align: right;">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">gdp_per_capita</th>
 <th data-quarto-table-cell-role="th">inflation_rate</th>
@@ -267,20 +263,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 <p>Conclusion The analysis suggests a diverse economic landscape, where some countries experience high inflation despite low GDP per capita. Further investigation into regional trends could provide deeper insights.</p>
-<p>References The data used in this report comes from the World Bank’s World Development Indicators <span class="citation" data-cites="wdi2023">(<a href="#ref-wdi2023" role="doc-biblioref">Group 2023</a>)</span>. Prior research suggests that inflation can significantly impact economic growth <span class="citation" data-cites="economist2022">(<a href="#ref-economist2022" role="doc-biblioref">Economist 2022</a>)</span>.</p>
-
+<p>References The data used in this report comes from the World Bank’s World Development Indicators <span class="citation" data-cites="wdi2023">[@wdi2023]</span>. Prior research suggests that inflation can significantly impact economic growth <span class="citation" data-cites="economist2022">[@economist2022]</span>.</p>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-economist2022" class="csl-entry" role="listitem">
-Economist, The. 2022. <span>“How Inflation Impacts Economic Growth.”</span> <a href="https://www.economist.com/finance-and-economics/2022">https://www.economist.com/finance-and-economics/2022</a>.
-</div>
-<div id="ref-wdi2023" class="csl-entry" role="listitem">
-Group, World Bank. 2023. <span>“World Development Indicators.”</span> <a href="https://databank.worldbank.org/source/world-development-indicators">https://databank.worldbank.org/source/world-development-indicators</a>.
-</div>
-</div></section></div></main>
+</main>
 <!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
+<script id = "quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -699,7 +687,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
+</body>
 
-
-
-</body></html>
+</html>

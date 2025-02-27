@@ -3,11 +3,14 @@ title: "World Development Indicators Analysis - 2022"
 author: "Iliyan Sherali"
 date: "26 February 2025"
 format:
-  html: default
+  html:
+    self-contained: true  # Embeds CSS, JS, and images into the HTML
   pdf: default
 execute:
   echo: false
 ---
+
+
 
 # World Development Indicators Analysis - 2022
 
